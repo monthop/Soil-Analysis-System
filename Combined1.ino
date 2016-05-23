@@ -1,3 +1,6 @@
+//This is the combined code for all four soil sensors for the Mars Rover Soil Analysis System.
+//The four sensors are: EC meter, pH sensor, Moisture sensor, and DHT22 temperature sensor.
+
 // # EC meter
 // # Editor     : YouYou from DFRobot
 // # Date       : 23.04.2014
@@ -86,7 +89,6 @@ DHT dht(DHTPIN, DHTTYPE);
 void setup() {
  // EC meter
  // initialize serial communication with computer:
-  //Serial.begin(9600);
   Serial.begin(115200);
   // initialize all the readings to 0:
   for (byte thisReading = 0; thisReading < numReadings; thisReading++)
@@ -97,20 +99,16 @@ void setup() {
 
   //pH meter
   pinMode(LED,OUTPUT);  
-  Serial.begin(9600);
-  //Serial.begin(115200);  
+  Serial.begin(9600); 
   Serial.println("pH meter experiment");    //Test the serial monitor
 
   //DHT22 temperature sensor
   Serial.begin(9600);
-  //Serial.begin(115200);
   Serial.println("DHTxx test");
   dht.begin();
   
   //Moisture sensor
-  //Serial.begin(57600);
-  Serial.begin(9600);
-  //Serial.begin(115200);
+  Serial.begin(57600);
 }
 
 void loop() {
@@ -270,4 +268,3 @@ double avergearray(int* arr, int number){
   }//if
   return avg;
 }
-
