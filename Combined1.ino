@@ -225,7 +225,7 @@ void loop() {
   
   //Moisture Sensor
   Serial.print("Moisture Sensor Value:");
-  Serial.println(analogRead(A0));
+  Serial.println(analogRead(A3));
 }
 
 //pH sensor functions
