@@ -99,16 +99,16 @@ void setup() {
 
   //pH meter
   pinMode(LED,OUTPUT);  
-  Serial.begin(9600); 
+
   Serial.println("pH meter experiment");    //Test the serial monitor
 
   //DHT22 temperature sensor
-  Serial.begin(9600);
+
   Serial.println("DHTxx test");
   dht.begin();
   
   //Moisture sensor
-  Serial.begin(57600);
+
 }
 
 void loop() {
